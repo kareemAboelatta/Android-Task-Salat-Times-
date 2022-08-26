@@ -1,4 +1,4 @@
-# Android-Task-Salat-Times-
+# Android-Task-Salat-Times :clock11:
 Simple application to get Islamic prayer times from API according to your current location, and user can choose which day he want..
 
 # Features:
