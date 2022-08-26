@@ -2,10 +2,10 @@
 Simple application to get Islamic prayer times from API according to your current location, and user can choose which day he want..
 
 # Features:
-- Islamic prayer times according to your current location
-- You can scroll and  choose which day you want ..
+- Islamic prayer times :clock11: according to your current location :sun_with_face:
+- You can scroll and  choose which day you want :mag: ..
 - Multi-threading
-- And all of these in One Activity  (one activity app)
+- And all of these in One Activity  (one activity app) :star:
 
 
 
