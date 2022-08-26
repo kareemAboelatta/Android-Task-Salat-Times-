@@ -9,6 +9,11 @@ Simple application to get Islamic prayer times from API according to your curren
 
 
 
+  # Dashboard
+  <img src="https://user-images.githubusercontent.com/62241386/168532430-78c1d694-21b1-48b5-87b5-cd788900671e.gif" width="400">&nbsp; 
+  <img src="https://user-images.githubusercontent.com/62241386/187002305-e7631df0-cdb3-4191-acd2-81f5b8a674fb.gif" width="500">&nbsp; 
+
+  
 
 ## Built With
 
