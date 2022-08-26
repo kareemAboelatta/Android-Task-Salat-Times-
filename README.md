@@ -9,10 +9,10 @@ Simple application to get Islamic prayer times from API according to your curren
 
 
 
-  # Dashboard
-  <img src="https://user-images.githubusercontent.com/62241386/187002305-e7631df0-cdb3-4191-acd2-81f5b8a674fb.gif" width="400">&nbsp; \
+  # Dashboard :mobile_phone_off:
+  <img src="https://user-images.githubusercontent.com/62241386/187002305-e7631df0-cdb3-4191-acd2-81f5b8a674fb.gif" width="400">&nbsp; 
   </br>
-  # Listener to your current Location
+  # Listener to your current Location :earth_africa:
   <img src="https://user-images.githubusercontent.com/62241386/187002251-b2460b8d-ce1a-4abc-a337-d4d95136fe9b.gif" width="400">&nbsp; 
 
   
