@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+    android:background="#dcf9f7"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:id="@+id/top_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_height="50dp">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:gravity="center_vertical|start"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            tools:text="DATE" />
+
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layoutDirection="locale">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+
+                android:id="@+id/nxtIB"
+                android:backgroundTint="#00000000"
+                android:layoutDirection="ltr"
+                android:src="@drawable/ic_next"
+                android:tint="@android:color/black" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:id="@+id/privesIB"
+
+
+                android:layout_marginEnd="12dp"
+                android:backgroundTint="#00000000"
+                android:layoutDirection="ltr"
+                android:src="@drawable/ic_previose"
+                android:tint="@android:color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+            android:id="@+id/center_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+        android:layout_marginBottom="32dp"
+            tools:layout_height="200dp">
+
+        <androidx.viewpager.widget.ViewPager
+                android:id="@+id/month_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/week_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#dcf9f7" />
+
+        <include
+            android:id="@+id/animate_container"
+            layout="@layout/animate_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_height="50dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+            android:id="@+id/bottom_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            tools:layout_height="50dp">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+            <Button
+                    android:id="@+id/collapse_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="6dp"
+                    android:background="#11000000"
+                    android:text="COLLAPSE"
+                    android:textSize="10sp"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

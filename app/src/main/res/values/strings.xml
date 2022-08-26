@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Android Task</string>
+
+
+    <string name="fajr">Fajr</string>
+    <string name="aduher">Aduher</string>
+    <string name="asr">Asr</string>
+    <string name="maghreb">Maghreb</string>
+    <string name="esha">Esha</string>
+
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="unknown">Cairo</string>
+    <string name="getting_your_address">Getting Your address...</string>
+
+
+</resources>
