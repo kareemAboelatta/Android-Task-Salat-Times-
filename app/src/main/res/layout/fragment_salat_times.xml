@@ -39,11 +39,9 @@
 
                 <TextView
                     android:gravity="center_vertical"
-                    android:textSize="@dimen/_20ssp"
-                    android:textStyle="bold"
+                    style="@style/TextView_salat"
                     android:layout_width="0dp"
                     android:text="@string/fajr"
-                    android:textColor="@color/purple_500"
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
                 <TextView
@@ -72,12 +70,9 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:gravity="center_vertical"
-                    android:textSize="@dimen/_20ssp"
-                    android:textStyle="bold"
+                    style="@style/TextView_salat"
                     android:layout_width="0dp"
                     android:text="@string/aduher"
-                    android:textColor="@color/purple_500"
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
                 <TextView
@@ -106,12 +101,9 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:gravity="center_vertical"
-                    android:textSize="@dimen/_20ssp"
-                    android:textStyle="bold"
+                    style="@style/TextView_salat"
                     android:layout_width="0dp"
                     android:text="@string/asr"
-                    android:textColor="@color/purple_500"
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
                 <TextView
@@ -140,12 +132,9 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:gravity="center_vertical"
-                    android:textSize="@dimen/_20ssp"
-                    android:textStyle="bold"
+                    style="@style/TextView_salat"
                     android:layout_width="0dp"
                     android:text="@string/maghreb"
-                    android:textColor="@color/purple_500"
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
                 <TextView
@@ -174,12 +163,9 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:gravity="center_vertical"
-                    android:textSize="@dimen/_20ssp"
-                    android:textStyle="bold"
+                    style="@style/TextView_salat"
                     android:layout_width="0dp"
                     android:text="@string/esha"
-                    android:textColor="@color/purple_500"
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
                 <TextView
