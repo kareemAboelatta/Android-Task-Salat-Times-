@@ -113,16 +113,13 @@ class SalatTimeFragment : Fragment(R.layout.fragment_salat_times), EasyPermissio
                             location.latitude,
                             location.longitude
                         )
-
                         currentCity = city
-                        address.text = city
 
+                        address.text = currentCity
                         viewModel.getSalatTimes(
                             date = currentDate,
                             address = currentCity!!
                         )
-
-
                     }
                     is Resource.Error -> {
 

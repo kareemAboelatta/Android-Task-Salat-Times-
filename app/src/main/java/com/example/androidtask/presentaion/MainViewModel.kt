@@ -27,8 +27,6 @@ class MainViewModel @Inject constructor(
     private var _locationState= MutableStateFlow<Resource<Location,String>>(Resource.Empty())
     val locationState: StateFlow<Resource<Location, String>> = _locationState
 
-
-
     fun getSalatTimes(date: String, address: String) {
         getSalatTimesUseCase(date, address).onEach {
             when (it) {
@@ -40,8 +38,6 @@ class MainViewModel @Inject constructor(
         }.launchIn(viewModelScope)
     }
 
-
-
     fun getLocation(){
         viewModelScope.launch {
             _locationState.value=Resource.Loading()  // loading
@@ -52,8 +48,6 @@ class MainViewModel @Inject constructor(
                 _locationState.value= Resource.Success(it)   // success
             }
         }
-
     }
-
 
 }
