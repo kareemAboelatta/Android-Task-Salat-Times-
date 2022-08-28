@@ -11,7 +11,6 @@ import androidx.lifecycle.lifecycleScope
 import com.example.androidtask.R
 import com.example.androidtask.core.Resource
 import com.example.androidtask.core.utils.GeocoderHelper
-import com.example.androidtask.core.utils.LocationHelper
 import com.example.androidtask.core.utils.Utils.convertDateTimeToString
 import com.google.android.material.snackbar.Snackbar
 import com.mikesu.horizontalexpcalendar.HorizontalExpCalendar
