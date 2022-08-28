@@ -269,9 +269,16 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_2sdp"
+                android:layout_height="@dimen/_1sdp"
                 android:layout_marginHorizontal="@dimen/_50sdp"
                 android:layout_marginVertical="@dimen/_5sdp"
+                android:background="@color/purple_500"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_70sdp"
                 android:background="@color/purple_500"
                 />
 
@@ -286,7 +293,8 @@
                 <ImageView
                     android:layout_width="@dimen/_40ssp"
                     android:layout_height="@dimen/_40sdp"
-                    android:src="@drawable/ic_location"/>
+                    android:src="@drawable/ic_location"
+                    app:tint="@color/purple_500" />
 
                 <TextView
                     android:id="@+id/address"
@@ -308,7 +316,7 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="wrap_content"
             android:id="@+id/progressbar_spin_kit"
-            android:visibility="gone"
+            android:visibility="visible"
             app:cardElevation="@dimen/_12sdp"
             android:layout_height="wrap_content"
             app:cardCornerRadius="@dimen/_10sdp"
@@ -326,6 +334,7 @@
                     android:id="@+id/spin_Kit"
                     android:layout_gravity="center"
                     app:SpinKit_Color="@color/purple_500" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

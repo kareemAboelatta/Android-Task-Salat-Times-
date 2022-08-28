@@ -7,7 +7,7 @@ import android.util.Log
 import android.widget.Toast
 import com.google.android.gms.location.*
 
-class LocationHelper(val activity: Activity, private val onLocationChange: (Location) -> Unit) {
+class LocationHelper(val activity: Activity, private val  onLocationChange: (Location) -> Unit) {
 
     private val fusedLocationProviderClient: FusedLocationProviderClient =
         LocationServices.getFusedLocationProviderClient(activity)

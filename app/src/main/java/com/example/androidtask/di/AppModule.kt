@@ -5,6 +5,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.example.androidtask.R
+import com.example.androidtask.data.data_source.LocationDataSource
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -31,6 +32,12 @@ object AppModule {
             .error(R.drawable.ic_launcher_background)
             .diskCacheStrategy(DiskCacheStrategy.DATA)
     )
+
+
+    @Singleton
+    @Provides
+    fun provideLocationDataSource(@ApplicationContext context: Context): LocationDataSource =
+        LocationDataSource(context)
 
 
 
