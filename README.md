@@ -15,7 +15,7 @@ Simple application to get Islamic prayer times from API according to your curren
 
   
 
-##  Built With <img src="https://media.giphy.com/media/5WILqPq29TyIkVCSej/giphy.gif" width="50">
+##  Built With <img src="https://media.giphy.com/media/5WILqPq29TyIkVCSej/giphy.gif" width="40">
 
 * [Kotlin](https://kotlinlang.org) - As a programming language.
 * [Coroutines](https://developer.android.com/kotlin/coroutines) - For multithreading while handling requests to the server and local database.
