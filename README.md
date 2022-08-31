@@ -15,7 +15,7 @@ Simple application to get Islamic prayer times from API according to your curren
 
   
 
-## Built With
+##  Built With <img src="https://media.giphy.com/media/5WILqPq29TyIkVCSej/giphy.gif" width="50">
 
 * [Kotlin](https://kotlinlang.org) - As a programming language.
 * [Coroutines](https://developer.android.com/kotlin/coroutines) - For multithreading while handling requests to the server and local database.
@@ -30,3 +30,6 @@ Simple application to get Islamic prayer times from API according to your curren
 
 * [Clean Architecture](https://www.raywenderlich.com/3595916-clean-architecture-tutorial-for-android-getting-started) - Applying Clean Architecture , Solid Principles and use cases  to build a robust, maintainable, and testable application.
 I also wrote an article about Clean Architecture maximizes the use of SOLID principles [here](https://github.com/kareemAboelatta/Social-media)
+
+
+### Don't forget to just put a star ⭐ if you like it
