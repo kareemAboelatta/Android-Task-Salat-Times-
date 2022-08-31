@@ -20,7 +20,7 @@ Simple application to get Islamic prayer times from API according to your curren
 * [Kotlin](https://kotlinlang.org) - As a programming language.
 * [Coroutines](https://developer.android.com/kotlin/coroutines) - For multithreading while handling requests to the server and local database.
 * [Flow](https://developer.android.com/kotlin/flow) - In coroutines, a flow is a type that can emit multiple values sequentially, as opposed to suspend functions that return only a single value. For example, you can use a flow to receive live updates from a database.
-
+* [Fused location provider](https://developers.google.com/android/reference/com/google/android/gms/location/FusedLocationProviderClient.html) is one of the location APIs in Google Play services. It manages the underlying location technology and provides a simple API so that you can specify requirements at a high level, like high accuracy or low power. It also optimizes the device's use of battery power.
 * [Navigation Component](https://developer.android.com/guide/navigation/navigation-getting-started) - To handle app navigation.
 * [Model-View-ViewModel(MVVM)](https://developer.android.com/topic/architecture) - Offers an implementation of observer design pattern.
 * [StateFlow](https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-state-flow/) - Flow APIs that enable flows to optimally emit state updates and emit values to multiple consumers.
