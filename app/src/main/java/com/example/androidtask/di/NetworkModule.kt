@@ -17,8 +17,6 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
-
-
     @Provides
     @Singleton
     fun provideSalatTimesApi(): SalatTimesApi {
@@ -28,8 +26,6 @@ object NetworkModule {
             .build()
             .create(SalatTimesApi::class.java)
     }
-
-
 
 
 }

@@ -3,7 +3,9 @@ package com.example.androidtask.presentaion
 import android.Manifest
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -12,24 +14,27 @@ import com.example.androidtask.R
 import com.example.androidtask.core.Resource
 import com.example.androidtask.core.utils.GeocoderHelper
 import com.example.androidtask.core.utils.Utils.convertDateTimeToString
+import com.example.androidtask.databinding.FragmentSalatTimesBinding
 import com.google.android.material.snackbar.Snackbar
 import com.mikesu.horizontalexpcalendar.HorizontalExpCalendar
 import com.mikesu.horizontalexpcalendar.common.Config
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.fragment_salat_times.*
 import org.joda.time.DateTime
 import pub.devrel.easypermissions.AppSettingsDialog
 import pub.devrel.easypermissions.EasyPermissions
 
 @AndroidEntryPoint
 class SalatTimeFragment : Fragment(R.layout.fragment_salat_times), EasyPermissions.PermissionCallbacks {
+    private var _binding: FragmentSalatTimesBinding? = null
+    private val binding get() = _binding!!
+
     companion object {
         const val PERMISSION_LOCATION_REQUEST_CODE = 1
     }
 
     private val viewModel by viewModels<MainViewModel>()
-    var currentCity: String? = null // initial value
 
+    var currentCity: String? = null // initial value
     var currentDate = "0" // initial value
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -37,7 +42,7 @@ class SalatTimeFragment : Fragment(R.layout.fragment_salat_times), EasyPermissio
 
         getLocation()
 
-        expCalender.setHorizontalExpCalListener(object :
+        binding.expCalender.setHorizontalExpCalListener(object :
             HorizontalExpCalendar.HorizontalExpCalListener {
             override fun onCalendarScroll(dateTime: DateTime) {
                 currentDate = convertDateTimeToString(dateTime)
@@ -48,7 +53,6 @@ class SalatTimeFragment : Fragment(R.layout.fragment_salat_times), EasyPermissio
                     )
                 }
             }
-
             override fun onDateSelected(dateTime: DateTime) {
                 currentDate = convertDateTimeToString(dateTime)
                 if (currentCity != null) {
@@ -58,48 +62,45 @@ class SalatTimeFragment : Fragment(R.layout.fragment_salat_times), EasyPermissio
                     )
                 }
             }
-
             //this don't
             override fun onChangeViewPager(viewPagerType: Config.ViewPagerType?) {
-                Log.e("Tag", "")
+                Log.i("Tag", "")
             }
 
         })
-
 
         lifecycleScope.launchWhenStarted {
             viewModel.timingsState.collect {
                 when (it) {
                     is Resource.Success -> {
-                        progressbar_spin_kit.visibility = View.GONE
-                        tv_fajr.text = it.data?.Fajr
-                        tv_sunrise.text = it.data?.Sunrise
-                        tv_aduhr.text = it.data?.Dhuhr
-                        tv_asr.text = it.data?.Asr
-                        tv_sunset.text = it.data?.Sunset
-                        tv_maghreb.text = it.data?.Maghrib
-                        tv_esha.text = it.data?.Isha
+                        binding.progressbarSpinKit.visibility = View.GONE
+                        binding.tvFajr.text = it.data?.Fajr
+                        binding.tvSunrise.text = it.data?.Sunrise
+                        binding.tvAduhr.text = it.data?.Dhuhr
+                        binding.tvAsr.text = it.data?.Asr
+                        binding.tvSunset.text = it.data?.Sunset
+                        binding.tvMaghreb.text = it.data?.Maghrib
+                        binding.tvEsha.text = it.data?.Isha
                     }
                     is Resource.Error -> {
-                        progressbar_spin_kit.visibility = View.GONE
+                        binding.progressbarSpinKit.visibility = View.GONE
 
-                        Log.e("HomeFragment", "error" + it.message)
+                        Log.i("HomeFragment", "error" + it.message)
                         Snackbar.make(
                             requireView(), "error" + it.message, Snackbar.LENGTH_LONG
                         ).show()
                     }
                     is Resource.Loading -> {
-                        Log.e("HomeFragment", "loading")
-                        progress_text.text = "getting timings..."
-                        progressbar_spin_kit.visibility = View.VISIBLE
-                        spin_Kit.visibility = View.VISIBLE
+                        Log.i("HomeFragment", "loading")
+                        binding.progressText.text = "getting timings..."
+                        binding.progressbarSpinKit.visibility = View.VISIBLE
+                        binding.spinKit.visibility = View.VISIBLE
 
                     }
                 }
 
             }
         }
-
 
 
         lifecycleScope.launchWhenStarted {
@@ -114,8 +115,7 @@ class SalatTimeFragment : Fragment(R.layout.fragment_salat_times), EasyPermissio
                             location.longitude
                         )
                         currentCity = city
-
-                        address.text = currentCity
+                        binding.address.text = currentCity
                         viewModel.getSalatTimes(
                             date = currentDate,
                             address = currentCity!!
@@ -127,7 +127,6 @@ class SalatTimeFragment : Fragment(R.layout.fragment_salat_times), EasyPermissio
                         Snackbar.make(
                             requireView(), "error" + it.message, Snackbar.LENGTH_LONG
                         ).show()
-
                     }
                     is Resource.Loading -> {
                         Log.i("Address", "loading")
@@ -138,7 +137,6 @@ class SalatTimeFragment : Fragment(R.layout.fragment_salat_times), EasyPermissio
         }
 
     }
-
 
     private fun hasLocationPermission() =
         EasyPermissions.hasPermissions(
@@ -154,7 +152,6 @@ class SalatTimeFragment : Fragment(R.layout.fragment_salat_times), EasyPermissio
             Manifest.permission.ACCESS_FINE_LOCATION
         )
     }
-
     override fun onPermissionsDenied(requestCode: Int, perms: MutableList<String>) {
         if (EasyPermissions.somePermissionPermanentlyDenied(this, perms)) {
             AppSettingsDialog.Builder(this).build().show()
@@ -170,7 +167,6 @@ class SalatTimeFragment : Fragment(R.layout.fragment_salat_times), EasyPermissio
             Toast.LENGTH_SHORT
         ).show()
         getLocation()
-
     }
 
     override fun onRequestPermissionsResult(
@@ -181,7 +177,6 @@ class SalatTimeFragment : Fragment(R.layout.fragment_salat_times), EasyPermissio
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this)
     }
-
     private fun getLocation() {
         if (hasLocationPermission()) {
             viewModel.getLocation()
@@ -190,5 +185,19 @@ class SalatTimeFragment : Fragment(R.layout.fragment_salat_times), EasyPermissio
         }
     }
 
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentSalatTimesBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 
 }

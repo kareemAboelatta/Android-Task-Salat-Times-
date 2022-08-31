@@ -28,7 +28,6 @@ object RepositoryModule {
         return RepositoryImp(api)
     }
 
-
     @Singleton
     @Provides
     fun providesLocationRepository(LocationDataSource: LocationDataSource): LocationRepository {

@@ -22,175 +22,185 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="@dimen/_15sdp"
-            android:elevation="@dimen/_5sdp"
-            android:layout_marginTop="-20dp"
             android:layout_below="@id/expCalender"
-            android:background="@drawable/carved_background">
+            android:layout_marginTop="-20dp"
+            android:background="@drawable/carved_background"
+            android:elevation="@dimen/_5sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_15sdp">
 
             <LinearLayout
-                android:layout_marginTop="@dimen/_15sdp"
                 android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_height="wrap_content">
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:gravity="center_vertical"
                     style="@style/TextView_salat"
                     android:layout_width="0dp"
-                    android:text="@string/fajr"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/fajr" />
+
                 <TextView
-                    android:textSize="@dimen/_15ssp"
                     android:id="@+id/tv_fajr"
                     android:layout_width="wrap_content"
-                    android:text="05:00 AM"
                     android:layout_height="match_parent"
+                    android:text="05:00 AM"
+                    style="@style/TextView_salat_times"
                     />
 
             </LinearLayout>
+
             <View
 
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_1sdp"
                 android:layout_marginHorizontal="@dimen/_15sdp"
                 android:layout_marginVertical="@dimen/_4sdp"
-                android:background="#2196F3"/>
+                android:background="#2196F3" />
 
             <LinearLayout
-                android:layout_marginTop="@dimen/_15sdp"
                 android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_height="wrap_content">
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="horizontal">
 
                 <TextView
                     style="@style/TextView_salat"
                     android:layout_width="0dp"
-                    android:text="@string/aduher"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:text="@string/aduher" />
+
                 <TextView
-                    android:textSize="@dimen/_15ssp"
                     android:id="@+id/tv_aduhr"
                     android:layout_width="wrap_content"
-                    android:text="05:00 AM"
                     android:layout_height="match_parent"
+                    android:text="05:00 AM"
+                    style="@style/TextView_salat_times"
                     />
 
             </LinearLayout>
+
             <View
 
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_1sdp"
                 android:layout_marginHorizontal="@dimen/_15sdp"
                 android:layout_marginVertical="@dimen/_4sdp"
-                android:background="#2196F3"/>
+                android:background="#2196F3" />
 
             <LinearLayout
-                android:layout_marginTop="@dimen/_15sdp"
                 android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_height="wrap_content">
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="horizontal">
 
                 <TextView
                     style="@style/TextView_salat"
                     android:layout_width="0dp"
-                    android:text="@string/asr"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:text="@string/asr" />
+
                 <TextView
-                    android:textSize="@dimen/_15ssp"
                     android:id="@+id/tv_asr"
                     android:layout_width="wrap_content"
-                    android:text="05:00 AM"
                     android:layout_height="match_parent"
+                    android:text="05:00 AM"
+                    style="@style/TextView_salat_times"
                     />
 
             </LinearLayout>
+
             <View
 
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_1sdp"
                 android:layout_marginHorizontal="@dimen/_15sdp"
                 android:layout_marginVertical="@dimen/_4sdp"
-                android:background="#2196F3"/>
+                android:background="#2196F3" />
 
             <LinearLayout
-                android:layout_marginTop="@dimen/_15sdp"
                 android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_height="wrap_content">
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="horizontal">
 
                 <TextView
                     style="@style/TextView_salat"
                     android:layout_width="0dp"
-                    android:text="@string/maghreb"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:text="@string/maghreb" />
+
                 <TextView
-                    android:textSize="@dimen/_15ssp"
                     android:id="@+id/tv_maghreb"
                     android:layout_width="wrap_content"
-                    android:text="05:00 AM"
                     android:layout_height="match_parent"
+                    android:text="05:00 AM"
+                    style="@style/TextView_salat_times"
                     />
 
             </LinearLayout>
+
             <View
 
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_1sdp"
                 android:layout_marginHorizontal="@dimen/_15sdp"
                 android:layout_marginVertical="@dimen/_4sdp"
-                android:background="#2196F3"/>
+                android:background="#2196F3" />
 
             <LinearLayout
-                android:layout_marginTop="@dimen/_15sdp"
                 android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_height="wrap_content">
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="horizontal">
 
                 <TextView
                     style="@style/TextView_salat"
                     android:layout_width="0dp"
-                    android:text="@string/esha"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:text="@string/esha" />
+
                 <TextView
-                    android:textSize="@dimen/_15ssp"
                     android:id="@+id/tv_esha"
                     android:layout_width="wrap_content"
-                    android:text="05:00 AM"
                     android:layout_height="match_parent"
+                    android:text="05:00 AM"
+                    style="@style/TextView_salat_times"
                     />
 
             </LinearLayout>
+
             <View
 
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_1sdp"
                 android:layout_marginHorizontal="@dimen/_15sdp"
                 android:layout_marginVertical="@dimen/_4sdp"
-                android:background="#2196F3"/>
+                android:background="#2196F3" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -199,20 +209,20 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="@dimen/_60sdp"
                         android:layout_height="@dimen/_60sdp"
-                        android:src="@drawable/sunrise"
                         android:scaleType="centerCrop"
-                        />
+                        android:src="@drawable/sunrise" />
 
                     <TextView
+                        android:id="@+id/tv_sunrise"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/_15ssp"
-                        android:id="@+id/tv_sunrise"
-                        android:text="05:33 Am"
                         android:layout_margin="@dimen/_2sdp"
+                        android:text="05:33 Am"
+                        style="@style/TextView_salat_times"
                         />
 
 
@@ -224,20 +234,20 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="@dimen/_60sdp"
                         android:layout_height="@dimen/_60sdp"
-                        android:src="@drawable/sunset"
                         android:scaleType="centerCrop"
-                        />
+                        android:src="@drawable/sunset" />
 
                     <TextView
+                        android:id="@+id/tv_sunset"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/_15ssp"
-                        android:id="@+id/tv_sunset"
-                        android:text="05:33 Am"
                         android:layout_margin="@dimen/_2sdp"
+                        android:text="05:33 Am"
+                        style="@style/TextView_salat_times"
                         />
 
 
@@ -247,35 +257,34 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_height="@dimen/_3sdp"
                 android:layout_marginHorizontal="@dimen/_10sdp"
-                android:background="@color/purple_500"
-                />
+                android:layout_marginVertical="@dimen/_3sdp"
+                android:background="@color/purple_500" />
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_1sdp"
-                android:layout_marginHorizontal="@dimen/_50sdp"
-                android:layout_marginVertical="@dimen/_5sdp"
-                android:background="@color/purple_500"
-                />
+                android:layout_height="@dimen/_3sdp"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:layout_marginVertical="@dimen/_3sdp"
+                android:background="@color/purple_500" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_2sdp"
-                android:layout_marginHorizontal="@dimen/_70sdp"
-                android:background="@color/purple_500"
-                />
+                android:layout_marginHorizontal="@dimen/_50sdp"
+                android:layout_marginVertical="@dimen/_3sdp"
+                android:background="@color/purple_500" />
+
 
 
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="@dimen/_10sdp"
-                >
+                android:layout_margin="@dimen/_15sdp"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:layout_width="@dimen/_40ssp"
                     android:layout_height="@dimen/_40sdp"
@@ -286,12 +295,11 @@
                     android:id="@+id/address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/getting_your_address"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/_18ssp"
-                    android:layout_margin="@dimen/_5sdp"
                     android:layout_gravity="center"
-                    />
+                    android:layout_margin="@dimen/_5sdp"
+                    android:text="@string/getting_your_address"
+                    style="@style/TextView_salat"
+                    android:textColor="@color/black"/>
             </LinearLayout>
 
 

@@ -1,6 +1,5 @@
 package com.example.androidtask.domain.use_cases
 
-import android.content.Context
 import com.example.androidtask.core.Resource
 import com.example.androidtask.data.dto.toImportantTimings
 import com.example.androidtask.data.repository.RepositoryImp
@@ -25,8 +24,8 @@ class GetSalatTimesUseCase @Inject constructor(
             val timingsDto = repository.getSalatTimes(date , address )
             emit(Resource.Success(timingsDto.data.timings.toImportantTimings()))
 
-        } catch (ex: HttpException) {
-            emit(Resource.Error(ex.message))
+        } catch (eHttp: HttpException) {
+            emit(Resource.Error(eHttp.message))
         } catch (e: IOException) {
             emit(Resource.Error("Can't reach the server, please check your internet Connection and try again"))
         } catch (e: Exception) {

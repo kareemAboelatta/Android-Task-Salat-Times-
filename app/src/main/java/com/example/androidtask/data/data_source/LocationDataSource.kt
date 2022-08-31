@@ -60,13 +60,13 @@ class LocationDataSource @Inject constructor(val context: Context) {
             // to handle the case where the user grants the permission. See the documentation
             // for ActivityCompat#requestPermissions for more details.
 
+        }else{
+            fusedLocationClient.requestLocationUpdates(
+                locationRequest,
+                callBack,
+                Looper.getMainLooper()
+            )
         }
-
-        fusedLocationClient.requestLocationUpdates(
-            locationRequest,
-            callBack,
-            Looper.getMainLooper()
-        )
         awaitClose { fusedLocationClient.removeLocationUpdates(callBack) }
     }
 

@@ -20,4 +20,12 @@
         <item name="android:textSize">@dimen/_20ssp</item>
         <item name="android:textColor">@color/purple_500</item>
     </style>
+
+    <!--android:textSize="@dimen/_15ssp"-->
+
+    <style name="TextView_salat_times" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/_15ssp</item>
+    </style>
+
+
 </resources>
